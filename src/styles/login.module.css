@@ -1,0 +1,202 @@
+:root {
+  --main-accent-color: #7ead0e;
+  --hover-color: #6f9b0e;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #edf6f9;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+}
+
+/* Left Image Section */
+.imageSection {
+  flex: 1;
+  background: url("https://i.pinimg.com/736x/6e/46/da/6e46da2c1712b7daaba49f78988221a4.jpg") no-repeat center center/cover;
+  border-radius: 10px 0 0 10px;
+  /* min-height: 500px; */
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+}
+
+/* Right Form Section */
+.authFormSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 2.2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  min-width: 380px;
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-50%);
+  z-index: 2; /* Make sure it stays above the image */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Add depth */
+}
+
+.authFormSection h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--main-accent-color);
+  margin-bottom: 2rem;
+}
+
+.auth-form-section input {
+  width: 100%;
+  height: 55px;
+  padding: 1rem 1.6rem; /* Increased padding for a medium size */
+  margin-bottom: 1.2rem;
+  border: 2px solid #cccccc;
+  border-radius: 12px;
+  font-size: 1.3rem;
+}
+input[type="email"]{
+  height: 33px;
+  font-size: 1.2rem;
+}
+
+.authFormSection input:focus {
+  border-color: var(--main-accent-color);
+  outline: none;
+}
+
+.passwordField {
+  position: relative;
+  width:100%;
+  height: 15px;
+  margin-top: 1rem;
+}
+
+.passwordField input {
+  height: 40px;
+  padding-right: 40px;
+}
+.passwordField span {
+  position: absolute;
+  right: 20px;
+  top: 100%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.rememberMe {
+  display: flex;
+  align-items: center;
+  margin-top: 1.8rem;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.authButton {
+  width: 80%;
+  height: 50px;
+  background-color: var(--main-accent-color);
+  color: white;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.authButton:hover {
+  background-color: var(--hover-color);
+}
+
+.orText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+.orText::before,
+.orText::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+  margin: 0 10px;
+}
+
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0.5rem;
+}
+
+.socialIcons a {
+  font-size: 22px;
+  color: #0056b3;
+}
+
+.socialIcons a:hover {
+  color: #003f7f;
+}
+
+p {
+  color: #0d1321;
+}
+
+p span {
+  cursor: pointer;
+  color: var(--main-accent-color);
+}
+
+p span:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+  .imageSection {
+    width: 100%;
+    height: 45vh;
+    border-radius: 20px 20px 0 0;
+  }
+  .authFormSection {
+    width: 90%;
+    border-radius: 0 0 20px 20px;
+    /* padding: 2rem; */
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .authFormSection {
+    padding: 1.5rem;
+  }
+  .authFormSection h2 {
+    font-size: 2rem;
+  }
+  .authFormSection input {
+    height: 45px;
+    font-size: 1rem;
+  }
+  .authButton {
+    height: 45px;
+    font-size: 1rem;
+  }
+}

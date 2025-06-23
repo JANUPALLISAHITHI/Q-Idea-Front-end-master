@@ -1,0 +1,38 @@
+.mobile-nav-bar-container{
+    position: fixed;
+    bottom: -1rem;
+    left: 0;
+    width: 100%;
+}
+.mobile-nav-list{
+    background-color: var(--background-color);
+    display: flex;
+    width: 100%;
+    padding: 1rem .5rem;
+    justify-content: space-between;
+}
+.mobile-nav-list li a img{
+    width: 40px;
+    height: 40px;
+}
+@media (max-width : 600px) {
+    #header{
+        padding: 1rem .5rem;
+        align-items: center;
+    }
+    #header .header-logo img{
+        width: 5rem;
+    }
+    .header-elems .header-elems-item img {
+        width: 25px;
+        height: 25px;
+    }
+    .header-elems .header-elems-item img.avatar {
+        width: 30px;
+        height: 30px;
+    }
+    .header-searchbar {
+        width: 45%;
+    }
+   
+}

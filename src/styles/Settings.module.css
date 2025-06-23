@@ -1,0 +1,483 @@
+.settingsContainer {
+  display: flex;
+  min-height: calc(100vh - 80px);
+  background-color: var(--background-color);
+}
+
+.settingsSidebar {
+  width: 280px;
+  padding: 24px;
+  background-color: var(--header-bg-color);
+  border-right: 1px solid var(--light-gray-02);
+}
+
+.settingsContent {
+  flex: 1;
+  padding: 32px;
+  background-color: var(--header-bg-color);
+  margin: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.settingsNav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.navButton {
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  color: var(--medium-gray-01);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navButton:hover {
+  background-color: var(--light-gray-01);
+  color: var(--primary-text-color);
+}
+
+.navButton.active {
+  background-color: rgba(126, 173, 14, 0.1);
+  color: var(--main-accent-color);
+  font-weight: 600;
+}
+
+.navIcon {
+  font-size: 20px;
+}
+
+.settingsSection {
+  max-width: 600px;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--primary-text-color);
+}
+
+.formGroup {
+  margin-bottom: 24px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--primary-text-color);
+  font-size: 14px;
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--light-gray-02);
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: var(--header-bg-color);
+  color: var(--primary-text-color);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+  border-color: var(--main-accent-color);
+  box-shadow: 0 0 0 3px rgba(126, 173, 14, 0.2);
+  outline: none;
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.profileImageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.profileImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 3px solid var(--light-gray-02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.profileImage:hover {
+  transform: scale(1.05);
+}
+
+.fileInput {
+  display: none;
+}
+
+.uploadButton {
+  padding: 10px 16px;
+  background-color: var(--light-gray-01);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--primary-text-color);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.uploadButton:hover {
+  background-color: var(--light-gray-02);
+}
+
+.saveButton {
+  padding: 12px 24px;
+  background-color: var(--main-accent-color);
+  color: var(--btn-text-color);
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(126, 173, 14, 0.2);
+}
+
+.saveButton:hover {
+  background-color: var(--main-accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(126, 173, 14, 0.3);
+}
+
+.saveButton:disabled {
+  background-color: var(--light-gray-03);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.successAlert,
+.errorAlert {
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.successAlert {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.errorAlert {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.closeAlert {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: inherit;
+  padding: 4px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.closeAlert:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Account Settings */
+.phoneGroup {
+  display: flex;
+  gap: 16px;
+}
+
+.countryCode {
+  flex: 1;
+}
+
+.phoneNumber {
+  flex: 3;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.logoutButton {
+  padding: 12px 24px;
+  background-color: var(--light-gray-01);
+  color: var(--primary-text-color);
+  border: 1px solid var(--light-gray-03);
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logoutButton:hover {
+  background-color: var(--light-gray-02);
+  transform: translateY(-1px);
+}
+
+/* Notification Settings */
+.notificationItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--light-gray-02);
+}
+
+.notificationInfo {
+  flex: 1;
+}
+
+.notificationInfo h4 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  color: var(--primary-text-color);
+}
+
+.notificationInfo p {
+  margin: 0;
+  color: var(--medium-gray-01);
+  font-size: 14px;
+}
+
+.toggleSwitch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.toggleSwitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--light-gray-03);
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--main-accent-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Social Connections */
+.socialConnection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--light-gray-02);
+}
+
+.socialInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.socialIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.connectButton {
+  padding: 8px 16px;
+  background-color: var(--main-accent-color);
+  color: var(--btn-text-color);
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.connectButton:hover {
+  background-color: var(--main-accent-hover);
+  transform: translateY(-1px);
+}
+
+.disconnectButton {
+  padding: 8px 16px;
+  background-color: var(--light-gray-01);
+  color: var(--primary-text-color);
+  border: 1px solid var(--light-gray-03);
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.disconnectButton:hover {
+  background-color: var(--light-gray-02);
+  transform: translateY(-1px);
+}
+
+/* Danger Zone */
+.dangerCard {
+  padding: 24px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 12px;
+  background-color: rgba(239, 68, 68, 0.05);
+  margin-top: 32px;
+}
+
+.dangerCard h4 {
+  margin-top: 0;
+  color: #ef4444;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.dangerCard p {
+  margin-bottom: 20px;
+  color: var(--medium-gray-01);
+  font-size: 14px;
+}
+
+.deleteButton {
+  padding: 12px 24px;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.deleteButton:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+}
+
+.deleteButton:disabled {
+  background-color: var(--light-gray-03);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .settingsContainer {
+    flex-direction: column;
+  }
+  
+  .settingsSidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--light-gray-02);
+    padding: 16px;
+  }
+  
+  .settingsNav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+  
+  .navButton {
+    white-space: nowrap;
+    margin-bottom: 0;
+    margin-right: 8px;
+  }
+  
+  .settingsContent {
+    margin: 16px;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .settingsContent {
+    padding: 16px;
+    margin: 8px;
+  }
+  
+  .phoneGroup {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .buttonGroup {
+    flex-direction: column;
+  }
+  
+  .dangerCard {
+    padding: 16px;
+  }
+}

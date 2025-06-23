@@ -1,0 +1,191 @@
+/* Variables - use your color palette */
+:root {
+  --page-bg-color: #f9fafb;
+  --primary-text-color: #111827;
+  --medium-gray-01: #6b7280;
+  --light-gray-01: #f3f4f6;
+  --light-gray-02: #e5e7eb;
+  --light-gray-03: #d1d5db;
+  --main-accent-color: #7ead0e; /* green accent */
+  --main-accent-hover: #5c8a00;
+  --primary-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --max-container-width: 1080px;
+}
+
+/* Wrapper */
+.wrapper {
+  min-height: 100vh;
+  background-color: var(--page-bg-color);
+  padding: 2rem 1rem 4rem;
+  color: var(--primary-text-color);
+  font-family: var(--primary-font);
+  max-width: var(--max-container-width);
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--main-accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.subheading {
+  font-size: 1rem;
+  color: var(--medium-gray-01);
+}
+
+/* Chart Section (unchanged) */
+.chartCard {
+  background: var(--light-gray-01);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(126, 173, 14, 0.15);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.chartTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-text-color);
+}
+
+/* Recent Activity Section */
+.activityCard {
+  background: var(--light-gray-01);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(126, 173, 14, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.activityTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--primary-text-color);
+}
+
+.activityList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.activityItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background-color: var(--light-gray-02);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  transition: background-color 0.3s ease;
+  border: 1px solid var(--light-gray-03);
+}
+
+.activityItem:hover {
+  background-color: var(--light-gray-03);
+}
+
+.user {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--primary-text-color);
+}
+
+.time {
+  font-size: 0.85rem;
+  color: var(--medium-gray-01);
+}
+
+/* New Sections Container */
+.sectionsContainer {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .sectionsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sectionsContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Section Card */
+.sectionCard {
+  background: var(--light-gray-01);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(126, 173, 14, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Section Title with Icon */
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-text-color);
+  margin-bottom: 1rem;
+}
+
+.sectionIcon {
+  color: var(--main-accent-color);
+  font-size: 1.5rem;
+}
+
+/* Section Item List */
+.sectionList {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow-y: auto;
+  max-height: 160px;
+}
+
+.sectionItem {
+  background: var(--light-gray-02);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--light-gray-03);
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  cursor: default;
+}
+
+.sectionItem:hover {
+  background-color: var(--light-gray-03);
+}
+
+/* Scrollbar styling for overflow if needed */
+.sectionList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sectionList::-webkit-scrollbar-thumb {
+  background-color: var(--main-accent-color);
+  border-radius: 3px;
+}

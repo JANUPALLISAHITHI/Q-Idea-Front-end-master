@@ -1,0 +1,64 @@
+**CSS Guidelines for Consistency and Scalability**
+
+This document outlines the CSS structure and best practices for the web application. Following these guidelines ensures consistency, maintainability, and scalability across the entire project.
+
+### Best Practices for CSS Variables
+
+1. **Always Use Defined Variables:**
+   When applying colors, typography, or spacing, always use the predefined variables (e.g., `--primary-text-color`, `--light-gray-01`).
+
+Note : Create diferent css files for each page so that it will be easy for debugging.Use only defined variables even in other css files as variables are mentioned in 'styles/styles.css' file. You may not get auto suggestions while working on different css file to solve you can just copy paste those variables into your working file (not best practice) or you can enter manually defined variable names.
+
+2. **Add New Variables When Needed:**
+   If a style requires a new value, define it as a variable at the top of the CSS file (preferably within the `:root` selector) before using it. For example:
+   ```css
+   :root {
+     --new-accent-color: #ff5733;
+   }
+
+   .custom-class {
+     color: var(--new-accent-color);
+   }
+   ```
+
+3. **Keep Variable Names Descriptive:**
+   Use meaningful and descriptive names that indicate their purpose or usage (e.g., `--btn-hover-bg-color` instead of `--color3`).
+
+4. **Group Variables Logically:**
+   Organize variables into logical sections (e.g., base colors, typography, spacing) for easier reference and updates.
+
+### Missing Components and Future Enhancements
+The current CSS file provides a strong foundation. However, the following components are missing and should be developed as needed:
+
+1. **Grid System:**
+   A CSS grid or flexbox-based system for layouts, including rows and columns.
+
+2. **Responsive Breakpoints:**
+   Media queries for small, medium, and large screens.
+
+3. **Navigation Menu:**
+   Header and navbar styles, including dropdowns and sticky headers.
+
+4. **Forms:**
+   Inputs, labels, error messages, and validation styles.
+
+5. **Custom Components:**
+   Cards, modals, alerts, and reusable UI elements.
+
+6. **Animations:**
+   Smooth hover effects, modals, and transitions for interactivity.
+
+7. **Accessibility Styles:**
+   Focus states, keyboard navigation, and ARIA-friendly design.
+
+8. **Dark Mode (Optional):**
+   A toggle for dark theme support.
+
+### Final Note
+Consistency is key to a maintainable project. Always adhere to the following principles:
+- Use only the defined variables.
+- Add new variables when required and keep them descriptive.
+- Avoid using hardcoded values directly in stylesheets.
+
+By following these guidelines, the project will remain organized and easy to update as it grows. Reach out to the team lead if you have questions about adding new styles or components.
+

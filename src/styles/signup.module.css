@@ -1,0 +1,260 @@
+:root {
+  --main-accent-color: #7ead0e;
+  --hover-color: #6f9b0e;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #edf6f9;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+}
+
+/* Left Image Section */
+.imageSection {
+  flex: 1;
+  /* background: url("https://i.pinimg.com/736x/dd/ac/f1/ddacf13289d443f7425a0460e613560d.jpg") no-repeat center center/cover; */
+  background: url("https://i.pinimg.com/736x/6e/46/da/6e46da2c1712b7daaba49f78988221a4.jpg") no-repeat center center/cover;
+  border-radius: 10px 0 0 10px;
+  height: auto;
+  min-height: 100%;
+  /* width: 100%;  */
+}
+
+/* Right Form Section */
+.authFormSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  box-shadow: 0 10 30px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  max-width: 400px; 
+  width: 100%;
+  position: relative;
+  top: auto;
+  right: auto;
+  transform: none;
+  z-index: 2;  
+}
+
+.authFormSection h2 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--main-accent-color);
+  margin-bottom: 1rem;
+}
+
+.authFormSection input {
+  width: 100%;
+  height: 43px;
+  padding: 10px;
+  margin-bottom: 10px;
+  /* max-width:100%; */
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border 0.3s ease-in-out;
+}
+
+.authFormSection input:focus {
+  border-color: var(--main-accent-color);
+}
+
+.inputRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Space between inputs */
+  justify-content: space-between;
+  width: 100%;
+}
+
+.inputRow input {
+  /* flex: 1; Make inputs take equal space */
+  /* width: 100%; */
+  width: 48%;
+  padding: 8px; 
+  font-size: 0.9rem; 
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.fullWidth {
+  width: 100%; 
+}
+
+input[type="email"]{
+  height: 43px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.passwordContainer {
+  display: flex;
+  gap: 1rem; /* Adds space between the fields */
+  width: 100%;
+}
+
+.passwordField {
+  flex: 1; /* Each field takes equal space */
+}
+
+.passwordField input {
+  width: 100%;
+}
+
+/* .passwordField span {
+  position: absolute;
+  right: 10px;
+  top: 1%;
+  transform: translateY(-50%);
+  cursor: pointer;
+} */
+
+.passwordRequirements p {
+  font-size: 14px;
+  margin: 3px 0;
+  color: #666;
+}
+
+.valid {
+  color: var(--main-accent-color);
+}
+
+.invalid {
+  color: red;
+}
+
+.passwordHints {
+  font-size: 12px;
+  color: red;
+  margin-top: 5px;
+  padding-left: 10px;
+}
+
+.passwordHints p {
+  margin: 3px 0;
+}
+
+
+.rememberMe {
+  display: flex;
+  align-items: center; /* Align checkbox and text */
+  gap: 8px; /* Add space between checkbox and text */
+}
+
+.rememberMe input{
+  width: 16px; /* Adjust checkbox size */
+  height: 16px;
+  accent-color: #0056b3;
+  margin: 0;
+  cursor: pointer;
+}
+
+.authButton {
+  width: 40%; /* Adjust width as needed */
+  display: block;
+  margin: 1rem auto; /* Centers the button */
+  height: 45px;
+  background-color: var(--main-accent-color);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.authButton:hover {
+  background-color: var(--hover-color);
+}
+
+.signupContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Center align everything */
+  justify-content: center;
+  gap: 1px; /* Adds spacing between elements */
+}
+
+.orText {
+  margin-top: 0.8px;  /* Space below Sign Up button */
+  font-size: 1rem;
+  text-align: center;
+  color: #666;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+  margin: 0.5rem;
+  margin-top: 0.5px;
+}
+
+.socialIcons a {
+  font-size: 1.7rem;
+  color: #0056b3;
+}
+
+.socialIcons a:hover {
+  color: #003f7f;
+}
+
+p {
+  color: #0d1321;
+}
+
+p span {
+  cursor: pointer;
+  color: var(--main-accent-color);
+}
+
+p span:hover {
+  text-decoration: underline;
+}
+
+.signupAccount {
+  margin-top: 0.3rem;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+  .imageSection {
+    width: 100%;
+    height: 35vh;
+    border-radius: 15px 15px 0 0;
+  }
+  .authFormSection {
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .authFormSection {
+    padding: 1.2rem;
+  }
+  .authFormSection h2 {
+    font-size: 1.8rem;
+  }
+  .authFormSection input {
+    height: 40px;
+    font-size: 0.9rem;
+  }
+  .authButton {
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
+

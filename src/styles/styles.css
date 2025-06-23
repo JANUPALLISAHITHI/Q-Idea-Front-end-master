@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/* Base Colors */
+:root {
+    --primary-text-color: #000814;
+    --secondary-text-color: #0d1321;
+    --background-color: #edf6f9;
+    --main-accent-color: #7ead0e;
+    --main-accent-hover : #99d708;
+    /* --main-accent-color: #49787D; */
+    /* --main-accent-color: ##7ead0e; */
+  
+    /* Additional Grayscale Palette */
+    --light-gray-01: #eaeaea;
+    --light-gray-02: #d3d3d3;
+    --light-gray-03: #cccccc;
+    --light-gray-04: #c0c0c0;
+    --medium-gray-01: #666666;
+    --medium-gray-02: #333333;
+    --dark-gray-01: #2e2e2e;
+    --dark-gray-02: #1e1e1e;
+  
+    /* Functional Colors */
+    --btn-text-color: #ffffff;
+    --btn-bg-color: var(--main-accent-color);
+    --link-color: #0056b3;
+    --link-hover-color: #003f7f;
+  
+    /* Background Colors */
+    --page-bg-color: var(--background-color);
+    --header-bg-color: #ffffff;
+    --footer-bg-color: #ffffff;
+    --table-head-bg-color: #f5f5f5;
+    --table-border-color: var(--light-gray-04);
+  
+    /* Spacing */
+    --column-padding: 1rem;
+    --column-bottom-margin-mobile: 1.6rem;
+  
+    /* Borders */
+    --btn-border-width: 0.2rem;
+    --btn-border-radius: 0.4rem;
+  
+    /* Max Width */
+    --max-container-width: 1200px;
+  
+    /* Typography */
+    --primary-font:'Inter', 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: Georgia, serif;
+    --heading-color: var(--primary-text-color);
+    --body-text-color: var(--secondary-text-color);
+    --footer-text-color: var(--secondary-text-color);
+  }
+  
+  /* Global Resets */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--primary-font);
+    background-color: var(--page-bg-color);
+    color: var(--body-text-color);
+    line-height: 1.6;
+  }
+  a{
+    text-decoration: none;
+  }
+  li{
+    list-style: none;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .header {
+    flex-shrink: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: right;
+  }
+  
+  .main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer 10+ */
+  }
+  .sidebar::-webkit-scrollbar {
+    display: none; /* For WebKit browsers */
+}
+.right-sidebar{
+  width: 300px;
+}
+  
+  .page-content {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  .mobile-nav-bar{
+    display: none;
+  }
+  
+  @media (max-width : 991px) {
+    .right-sidebar , .sidebar{
+      display: none;
+    }
+    .mobile-nav-bar{
+      display: block;
+    }
+    .page-content{
+
+      padding-bottom: 4rem;
+    }
+  }
+  

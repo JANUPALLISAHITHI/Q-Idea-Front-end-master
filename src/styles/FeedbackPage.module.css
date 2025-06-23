@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.pageWrapper {
+  max-width: var(--max-container-width);
+  margin: 2rem auto;
+  background-color: var(--header-bg-color);
+  padding: 2rem 2.5rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
+  font-family: var(--primary-font);
+  color: var(--body-text-color);
+  user-select: none;
+}
+
+.heading {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--main-text-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--primary-text-color);
+}
+
+.input,
+.textarea {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.4rem;
+  border: 1.5px solid var(--light-gray-03);
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+  font-family: var(--primary-font);
+  color: var(--secondary-text-color);
+  resize: vertical;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--main-accent-color);
+  outline: none;
+  box-shadow: 0 0 6px var(--main-accent-color);
+}
+
+.inputError {
+  border-color: #d93025;
+  box-shadow: 0 0 6px #d93025;
+}
+
+.errorMsg {
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  color: #d93025;
+  font-weight: 600;
+}
+
+.starsWrapper {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.star {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.star:hover,
+.star:focus-visible {
+  transform: scale(1.2);
+  outline: none;
+}
+
+.starIcon {
+  width: 32px;
+  height: 32px;
+  stroke-width: 2.5;
+  stroke: var(--main-accent-color);
+  fill: none;
+}
+
+.filledStar .starIcon {
+  fill: var(--main-accent-color);
+  stroke: var(--main-accent-color);
+}
+
+.submitBtn {
+  margin-top: 1rem;
+  padding: 0.85rem 1.5rem;
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: var(--btn-border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  width: 100%;
+  max-width: 280px;
+}
+
+.submitBtn:hover,
+.submitBtn:focus {
+  background-color: var(--main-accent-hover);
+  outline: none;
+}
+
+.thankYou {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--main-accent-color);
+}
+
+.thankYou h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.thankYou p {
+  font-size: 1.1rem;
+  color: var(--medium-gray-02);
+}

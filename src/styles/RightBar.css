@@ -1,0 +1,97 @@
+
+
+.right-bar-container{
+    padding: 2rem 0;
+}
+.right-bar-container .right-bar-top-container {
+    margin-bottom: 2rem;
+}
+.right-bar-container .right-bar-top-container .top-items {
+    display: flex;
+    flex-direction: column;
+    row-gap: .75rem;
+}
+.right-bar-container .right-bar-top-container .top-items li a {
+    display: flex;
+    column-gap: .5rem;
+    font-weight: 400;
+    align-items: center;
+    color: var(--primary-text-color);
+    padding:.7rem;
+    overflow: hidden;
+}
+.right-bar-container .right-bar-top-container .top-items li a:hover{
+  background-color: var(--light-gray-02);
+  border-radius: 24px;
+}
+
+.right-bar-container .right-bar-top-container .top-items li a img{
+    width: 30px;
+    height: 30px;
+}
+.right-bar-container .right-bar-bottom-container {
+    padding: 15px;
+  }
+  
+  .right-bar-container .right-bar-bottom-container .suggested-users-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .right-bar-container .right-bar-bottom-container .suggested-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  
+  .right-bar-container .right-bar-bottom-container .suggested-user:hover {
+    background: #f5f5f5;
+  }
+  
+  .right-bar-container .right-bar-bottom-container .user-profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .right-bar-container .right-bar-bottom-container .user-info {
+    flex-grow: 1;
+  }
+  
+  .right-bar-container .right-bar-bottom-container .user-fullname {
+    font-weight: 400;
+    display: block;
+    margin-bottom: 0;
+    color: var(--primary-text-color);
+  }
+  
+  .right-bar-container .right-bar-bottom-container .user-username {
+    margin-top: 0;
+    color: var( --medium-gray-01);
+    font-size: 0.9em;
+  }
+  
+  .right-bar-container .right-bar-bottom-container .follow-btn {
+    background: var(--main-accent-color);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: .2s ease-in;
+  }
+  
+  .right-bar-container .right-bar-bottom-container .follow-btn:hover {
+    background: #517202;
+  }
+  .line{
+    width: 100%;
+    height: 2px;
+    background-color:#00000039;
+  }
+  

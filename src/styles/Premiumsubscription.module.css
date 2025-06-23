@@ -1,0 +1,136 @@
+.pageContainer {
+  max-width: 900px;
+  margin: 3rem auto 4rem;
+  padding: 0 1rem;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  color: #8bc010; /* green */
+}
+
+.pageSubtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.planCards {
+  display: flex;
+  justify-content: center;
+  gap: 1.8rem;
+  flex-wrap: wrap;
+}
+
+.planCard {
+  background: #f9fdfa;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  box-shadow: 0 6px 16px rgba(139, 192, 16, 0.2);
+  cursor: pointer;
+  width: 260px;
+  padding: 1.8rem 1.5rem 2rem;
+  transition: all 0.35s ease;
+  user-select: none;
+}
+
+.planCard:hover {
+  box-shadow: 0 12px 28px rgba(139, 192, 16, 0.4);
+  transform: translateY(-6px);
+}
+
+.selected {
+  border-color: #b4fa10;
+  box-shadow: 0 14px 32px rgba(180, 250, 16, 0.6);
+  transform: translateY(-6px);
+  background: #e9f7c3;
+}
+
+.planTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #6a8b00;
+}
+
+.planPrice {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #8bc010;
+}
+
+.planDesc {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #556b00;
+}
+
+.featuresList {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #4a5e00;
+  line-height: 1.4;
+}
+
+.featureItem {
+  margin-bottom: 0.45rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.featureItem::before {
+  content: '✓';
+  color: #8bc010;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+}
+
+.subscribeButton {
+  margin-top: 3.2rem;
+  background: linear-gradient(90deg, #8bc010 0%, #b4fa10 100%);
+  border: none;
+  border-radius: 30px;
+  padding: 1.15rem 3.5rem;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.3s ease;
+  box-shadow: 0 6px 14px rgba(139, 192, 16, 0.5);
+}
+
+.subscribeButton:hover:not(:disabled) {
+  background: linear-gradient(90deg, #b4fa10 0%, #8bbf10 100%);
+  transform: scale(1.05);
+}
+
+.subscribeButton:disabled {
+  background: #bfc5a6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Responsive */
+
+@media (max-width: 720px) {
+  .planCards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .planCard {
+    width: 90%;
+    max-width: 320px;
+  }
+}

@@ -1,0 +1,149 @@
+
+
+
+
+
+//netflix
+.pageContainer {
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 1rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #323232;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #8bc010; /* your bright green */
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #5a6600;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.planCards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.planCard {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem 1.5rem 2.5rem;
+  width: 280px;
+  box-shadow: 0 8px 20px rgba(139, 192, 16, 0.15);
+  border: 2px solid transparent;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.planCard:hover {
+  border-color: #b4fa10;
+  box-shadow: 0 12px 28px rgba(180, 250, 16, 0.3);
+}
+
+.popularPlan {
+  border-color: #b4fa10;
+  box-shadow: 0 16px 30px rgba(180, 250, 16, 0.5);
+}
+
+.popularBadge {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background: #b4fa10;
+  color: white;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 30px;
+  box-shadow: 0 3px 7px rgba(139, 192, 16, 0.5);
+}
+
+.planName {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #5a6600;
+  margin-bottom: 0.3rem;
+}
+
+.planPrice {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #8bc010;
+  margin-bottom: 0.8rem;
+}
+
+.planDescription {
+  font-size: 1rem;
+  color: #797979;
+  margin-bottom: 1.2rem;
+  min-height: 48px; /* keep consistent card height */
+}
+
+.featuresList {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+  color: #4a4a4a;
+  font-weight: 600;
+  text-align: left;
+  width: 100%;
+}
+
+.featureItem {
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #5a6600;
+}
+
+.subscribeButton {
+  background: linear-gradient(to right, #8bc010, #b4fa10);
+  border: none;
+  padding: 0.8rem 2.2rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: background 0.4s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(139, 192, 16, 0.3);
+  width: 100%;
+}
+
+.subscribeButton:hover:not(:disabled) {
+  background: linear-gradient(to right, #b4fa10, #8bbf10);
+  transform: scale(1.05);
+}
+
+.subscribeButton:disabled {
+  background: #c0c0c0;
+  cursor: not-allowed;
+  color: #666;
+  box-shadow: none;
+}
+
+/* Responsive for mobile */
+@media (max-width: 720px) {
+  .planCards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .planCard {
+    width: 90%;
+    max-width: 320px;
+  }
+}
